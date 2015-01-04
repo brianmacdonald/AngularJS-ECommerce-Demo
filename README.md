@@ -1,7 +1,7 @@
 AngularJS ECommerce Demo
 ========================
 
-AngularJS is a powerful frontend library  This project was built to demonstrate how AngularJS
+AngularJS is a powerful library. This project demonstrates how AngularJS
 can be used on a ECommerce website.
 
 This project also demonstrates the usage of other frontend libraries including:
