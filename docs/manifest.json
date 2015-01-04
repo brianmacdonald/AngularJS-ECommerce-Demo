@@ -1,0 +1,9 @@
+{
+  "title": "AngularJS ECommerce Demo",
+  "rootDir": ".",
+  "files": ["../README.md"],
+  "links": [
+    ["View on Github", ""],
+    ["Report an issue", ""]
+  ]
+}
