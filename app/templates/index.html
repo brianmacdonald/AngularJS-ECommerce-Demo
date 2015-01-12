@@ -3,9 +3,14 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-animate.js"></script>
+    <script src="assets/js/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/js/vendor/masonry/masonry.js"></script>
+    <script src="assets/js/vendor/imagesloaded/imagesloaded.pkgd.js"></script>
+    <script src="assets/js/vendor/angular-masonry/angular-masonry.js"></script>
     <script src="assets/js/controllers.js"></script>
     <link rel="stylesheet" href="assets/css/vendor/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/vendor/bootstrap/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="assets/css/theme1-bundle.css">
 </head>
 <body ng-controller="ProductListCtrl">
 <header id="header">
@@ -42,18 +47,21 @@
 
 </header>
 <div class="container-fluid">
-            <!--Body content-->
 
-            <ul class="row products list-unstyled">
-                <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center" ng-repeat="product in products | filter:query">
-                    <img class="img-responsive" src="assets/images/{{product.image}}"/>
-                    <h4>{{product.name}}</h4>
-                    <p class="text-muted">
-                        <a href="{{product.attrib_link}}">{{product.author}}</a>
-                    </p>
-                    <p class="text-success">{{product.price}}</p>
-                </li>
-            </ul>
+    <ul class="row products list-unstyled" masonry>
+        <li class="masonry-brick col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center" ng-repeat="product in products | filter:query">
+            <img class="img-responsive" src="assets/images/{{product.image}}"/>
+            <h4>{{product.name}}</h4>
+            <p class="text-muted">
+                <a href="{{product.attrib_link}}">{{product.author}}</a>
+            </p>
+            <p class="text-success">
+                <span class="price">
+                    {{product.price}}
+                </span>
+            </p>
+        </li>
+    </ul>
 
 </div>
 <footer class="text-center">

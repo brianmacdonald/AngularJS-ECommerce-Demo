@@ -1,0 +1,15 @@
+// Collection
+// --------------------------------------
+
+// Mixins
+// ======================================
+.price-label(@color; @text-decoration) {
+  color: @color;
+  text-decoration: @text-decoration;
+}
+
+// Styles
+// ======================================
+span.price {
+  .price-label(@price-color, @price-decoration);
+}

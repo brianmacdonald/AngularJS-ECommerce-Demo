@@ -54,6 +54,21 @@ Development Workflow
 
 *TODO*
 
+Less Development
+================
+
+```
+    .../less/
+           /modules/   -- Mixins
+               collection.less
+           /themes/
+               /theme1/
+               /theme2/
+               /theme3/
+           modules.less
+           shared.less
+```
+
 Product Images
 --------------
 All product images are licensed under Creative Commons. See product data for attribution.
